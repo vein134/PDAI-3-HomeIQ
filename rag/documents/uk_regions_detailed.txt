@@ -1,0 +1,37 @@
+TITLE: UK Regional Property Market Analysis 2024-2025
+
+SECTION: London
+Average house price: £520,000. London remains the most expensive region in the UK. The city offers unparalleled job opportunities, cultural amenities, and transport links. However, affordability is a major challenge — the average price-to-earnings ratio exceeds 12x. Rental yields are relatively low at 3.2% due to high purchase prices. Key growth areas include East London (Stratford, Barking), South London (Croydon, Lewisham), and outer boroughs benefiting from Crossrail/Elizabeth Line. London's population density means green space is limited compared to other regions. The city has excellent healthcare facilities including world-class hospitals. Crime rates are higher than the national average but vary significantly by borough. Average salary is £44,000, the highest in the UK.
+
+SECTION: South East
+Average house price: £380,000. The South East benefits from proximity to London with better quality of life. Popular commuter towns include Guildford, Reading, Brighton, Canterbury, and Oxford. Strong school ratings with many outstanding-rated schools. Good green space access with the Surrey Hills, South Downs, and Kent countryside. Transport links are excellent with frequent services to London. Average commute to London is around 55 minutes. The region has a diverse economy with strong tech, finance, and professional services sectors. Rental yield: 3.8%. Average salary: £38,000.
+
+SECTION: South West
+Average house price: £310,000. The South West offers the highest quality of life scores for green space (90/100). Popular areas include Bristol (a major city with its own strong economy), Bath, Exeter, and the Cotswolds. Bristol has a thriving tech scene and creative industries. The region benefits from excellent natural amenities — Jurassic Coast, Dartmoor, Exmoor. Schools are generally good. Healthcare can be more limited in rural areas. Job market is weaker outside Bristol and Exeter. The region sees high demand from remote workers relocating from London. Rental yield: 4.1%. Average salary: £34,000.
+
+SECTION: East of England
+Average house price: £340,000. Includes Cambridge (a global tech hub with very high prices), Norfolk, Suffolk, Essex, and Hertfordshire. Cambridge benefits from the university and science park — excellent for STEM careers. The region offers a mix of historic market towns, coastal areas, and countryside. Good schools across the region. Transport links to London are strong from the western parts (Hertfordshire, Essex) but weaker in Norfolk and Suffolk. Rental yield: 3.9%. Average salary: £36,000.
+
+SECTION: East Midlands
+Average house price: £230,000. Includes Nottingham, Leicester, Derby, Lincoln, and Northampton. Significantly more affordable than southern regions. Nottingham is a vibrant university city with good nightlife and culture. Leicester has a diverse economy and cultural scene. The region has improving transport links (HS2 to serve the East Midlands hub). Good green space with the Peak District on the doorstep. Rental yields are strong at 4.6%. Average salary: £32,000. Growing tech and logistics sectors.
+
+SECTION: West Midlands
+Average house price: £245,000. Centred on Birmingham — the UK's second-largest city. Birmingham has undergone major regeneration and now hosts a thriving business district. The city benefits from HS2 (under construction) connecting to London. Strong cultural scene with museums, galleries, theatre, and diverse food scene. Coventry, Wolverhampton, and Stoke-on-Trent offer even more affordable options. The region has a young population and growing economy. Rental yield: 4.5%. Average salary: £33,000.
+
+SECTION: Yorkshire and the Humber
+Average house price: £200,000. Includes Leeds, Sheffield, York, Hull, and Harrogate. Leeds is a major financial and legal services centre — the largest economy outside London. Sheffield offers excellent value with a strong university presence. York is a historic city with tourism-driven economy and higher prices. Harrogate and Ilkley offer premium living. The Yorkshire Dales and Peak District provide outstanding natural beauty. Strong rental yields at 5.0%. Average salary: £31,000. Growing digital and tech sectors in Leeds.
+
+SECTION: North West
+Average house price: £210,000. Includes Manchester, Liverpool, Chester, and the Lake District. Manchester is arguably the UK's leading city outside London — strong in finance, tech, media, and creative industries. MediaCityUK in Salford hosts BBC and ITV. Liverpool offers excellent value with ongoing regeneration. The region has strong cultural identities and excellent nightlife. Transport links are good with two international airports. Rental yields are high at 5.2%. Average salary: £32,000. Manchester property prices are rising faster than the national average.
+
+SECTION: North East
+Average house price: £155,000. The most affordable region in England. Includes Newcastle, Durham, Sunderland, and Middlesbrough. Newcastle is a vibrant university city with excellent nightlife and culture. The region offers outstanding value for money. Beautiful coastline and countryside (Northumberland). However, the job market is the weakest in England with limited opportunities in some sectors. Public transport outside Newcastle is limited. Strong community feel. Rental yields are the highest in England at 5.8%. Average salary: £30,000.
+
+SECTION: Wales
+Average house price: £195,000. Includes Cardiff (the capital), Swansea, and extensive rural areas. Cardiff has a growing economy and good quality of life. The Brecon Beacons and Snowdonia offer outstanding natural beauty (green space score: 92/100). Cost of living is lower than England. Property is very affordable outside Cardiff. Rural areas can have limited job opportunities and services. Welsh language is spoken in some areas. Healthcare provision can be stretched in rural areas. Rental yield: 4.8%. Average salary: £30,500.
+
+SECTION: Scotland
+Average house price: £195,000. Includes Edinburgh, Glasgow, Aberdeen, and the Highlands. Edinburgh is a world-class city with strong financial services, tourism, and tech sectors but higher property prices (avg £290,000). Glasgow offers exceptional value with a vibrant cultural scene. Scotland has its own legal system for property transactions. No stamp duty — instead, Land and Buildings Transaction Tax (LBTT) with different thresholds. Scotland has free university tuition and free prescriptions. Council tax is generally lower. The Highlands offer unparalleled natural beauty but limited job opportunities. Rental yield: 4.7%. Average salary: £33,000.
+
+SECTION: Northern Ireland
+Average house price: £175,000. The most affordable region in the UK. Includes Belfast and Derry/Londonderry. Belfast has undergone significant regeneration with the Titanic Quarter development. The region offers outstanding value for money. Beautiful countryside and coastline (Giant's Causeway). Lower cost of living than mainland UK. However, job market opportunities are the most limited in the UK. Strong community feel. Property prices have not recovered to pre-2008 levels, suggesting potential for growth. Rental yields are high at 5.5%. Average salary: £30,000.
