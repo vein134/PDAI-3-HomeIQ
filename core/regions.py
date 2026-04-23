@@ -1,3 +1,18 @@
+from core.ons_hpi import get_live_prices
+
+_live_applied = False
+
+
+def refresh_live_prices():
+    global _live_applied
+    prices, _ = get_live_prices()
+    if prices:
+        for name, data in REGIONS.items():
+            if name in prices:
+                data["avg_price"] = prices[name]
+        _live_applied = True
+
+
 REGIONS = {
     "London": {
         "avg_price": 520000, "rental_yield": 3.2, "avg_salary": 44000,
@@ -72,6 +87,8 @@ REGIONS = {
         "culture": 45, "healthcare": 62, "job_market": 35,
     },
 }
+
+refresh_live_prices()
 
 QOL_DIMS = ["commute", "green_space", "schools", "safety", "culture", "healthcare"]
 QOL_LABELS = ["Commute", "Green Space", "Schools", "Safety", "Culture", "Healthcare"]

@@ -223,6 +223,125 @@ table thead th {
     background: var(--navy-4) !important; color: var(--gold) !important;
     font-size: 11px !important; text-transform: uppercase; letter-spacing: 0.06em;
 }
+
+/* ── Section headers ── */
+.section-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+}
+.section-sub {
+    color: #8899aa;
+    font-size: 13px;
+    margin-bottom: 18px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Feature cards (About page) ── */
+.feature-card {
+    background: linear-gradient(145deg, #1a2235 0%, #111827 100%);
+    border: 1px solid #243048;
+    border-radius: 14px;
+    padding: 24px;
+    height: 100%;
+    transition: transform 0.2s, border-color 0.2s;
+}
+.feature-card:hover {
+    transform: translateY(-2px);
+    border-color: #c9a84c66;
+}
+.feature-card .fc-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+    display: block;
+}
+.feature-card .fc-title {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.feature-card .fc-desc {
+    color: #8899aa;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ── Stat pill ── */
+.stat-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #1a2235;
+    border: 1px solid #243048;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: #f5f0e8;
+    font-family: 'DM Sans', sans-serif;
+}
+.stat-pill .sp-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* ── Arch diagram ── */
+.arch-box {
+    background: #1a2235;
+    border: 1px solid #243048;
+    border-radius: 10px;
+    padding: 16px 20px;
+    text-align: center;
+    color: #f5f0e8;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+}
+.arch-box .ab-label {
+    color: #c9a84c;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.arch-arrow {
+    text-align: center;
+    color: #243048;
+    font-size: 24px;
+    padding: 4px 0;
+}
+
+/* ── Data source badge ── */
+.source-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a2235;
+    border: 1px solid #243048;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+.source-badge .sb-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.source-badge .sb-name {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.source-badge .sb-desc {
+    color: #8899aa;
+    font-size: 12px;
+}
 </style>
 """
 

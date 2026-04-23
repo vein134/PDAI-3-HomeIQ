@@ -1,6 +1,7 @@
 import numpy as np
 from core.regions import REGIONS, QOL_DIMS
 from core.tax import compute_uk_tax, compute_stamp_duty
+from core.careers import compute_career_adjusted_score
 
 
 def compute_monthly_budget(salary, partner_salary, region_name, deposit_pct, mortgage_rate):
@@ -41,7 +42,7 @@ def compute_regional_score(region_name, profile, live_data, financial_weight=50,
     if user_budget and user_budget < r["avg_price"]:
         price_for_scoring = user_budget * 1.10
     affordability = price_for_scoring / max(household_income, 1)
-    afford_score = max(0, min(100, 100 - (affordability - 3) * 20))
+    afford_score = max(0, min(100, 100 - (affordability - 3) * 10))
 
     budget_data = compute_monthly_budget(
         salary, partner_salary, region_name, deposit_pct, live_data["rate_5yr_current"]
@@ -63,13 +64,28 @@ def compute_regional_score(region_name, profile, live_data, financial_weight=50,
     total_w = sum(weights.values())
     qol_score = sum(r[d] * weights[d] for d in QOL_DIMS) / total_w
 
+    industry = profile.get("industry")
+    job_type = profile.get("job_type", "hybrid")
+    career_score = 0.0
+    if industry:
+        career_score = compute_career_adjusted_score(region_name, industry, job_type)
+
     fw = financial_weight / 100
-    composite = financial_score * fw + qol_score * (1 - fw)
+    if industry:
+        career_weight = 0.20
+        composite = (
+            financial_score * fw * (1 - career_weight) +
+            qol_score * (1 - fw) * (1 - career_weight) +
+            career_score * career_weight
+        )
+    else:
+        composite = financial_score * fw + qol_score * (1 - fw)
 
     return {
         "region": region_name,
         "financial_score": round(financial_score, 1),
         "qol_score": round(qol_score, 1),
+        "career_score": round(career_score, 1),
         "composite": round(composite, 1),
         "affordability_ratio": round(affordability, 1),
         "disposable_monthly": budget_data["disposable_buy"],

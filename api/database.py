@@ -94,27 +94,50 @@ def get_or_create_user(username: str) -> int:
 
 def save_profile(user_id: int, profile: dict) -> int:
     conn = get_connection()
+    name = profile.get("name", "Default")
+    existing = conn.execute(
+        "SELECT id FROM profiles WHERE user_id = ? AND name = ? AND is_active = 1",
+        (user_id, name),
+    ).fetchone()
     conn.execute(
         "UPDATE profiles SET is_active = 0 WHERE user_id = ?", (user_id,)
     )
-    cur = conn.execute(
-        """INSERT INTO profiles (user_id, name, salary, partner_salary, budget,
-           deposit_pct, job_type, priorities, current_savings)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-        (
-            user_id,
-            profile.get("name", "Default"),
-            profile.get("salary", 50000),
-            profile.get("partner_salary", 0),
-            profile.get("budget"),
-            profile.get("deposit_pct", 15),
-            profile.get("job_type", "hybrid"),
-            json.dumps(profile.get("priorities", [])),
-            profile.get("current_savings", 0),
-        ),
-    )
-    conn.commit()
-    profile_id = cur.lastrowid
+    if existing:
+        conn.execute(
+            """UPDATE profiles SET salary=?, partner_salary=?, budget=?,
+               deposit_pct=?, job_type=?, priorities=?, current_savings=?, is_active=1
+               WHERE id=?""",
+            (
+                int(profile.get("salary", 50000)),
+                int(profile.get("partner_salary", 0)),
+                int(profile["budget"]) if profile.get("budget") else None,
+                int(profile.get("deposit_pct", 15)),
+                profile.get("job_type", "hybrid"),
+                json.dumps(profile.get("priorities", [])),
+                int(profile.get("current_savings", 0)),
+                existing[0],
+            ),
+        )
+        conn.commit()
+        profile_id = existing[0]
+    else:
+        cur = conn.execute(
+            """INSERT INTO profiles (user_id, name, salary, partner_salary, budget,
+               deposit_pct, job_type, priorities, current_savings)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            (
+                user_id, name,
+                int(profile.get("salary", 50000)),
+                int(profile.get("partner_salary", 0)),
+                int(profile["budget"]) if profile.get("budget") else None,
+                int(profile.get("deposit_pct", 15)),
+                profile.get("job_type", "hybrid"),
+                json.dumps(profile.get("priorities", [])),
+                int(profile.get("current_savings", 0)),
+            ),
+        )
+        conn.commit()
+        profile_id = cur.lastrowid
     conn.close()
     return profile_id
 

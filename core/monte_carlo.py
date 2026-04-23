@@ -3,7 +3,7 @@ from core.regions import REGIONS
 from core.tax import compute_stamp_duty
 
 
-def run_regional_monte_carlo(regions_list, profile, live_data, n_sims=1000, horizon=10, seed=42, deposit_pct=15):
+def run_regional_monte_carlo(regions_list, profile, live_data, n_sims=1000, horizon=10, seed=None, deposit_pct=15):
     rng = np.random.default_rng(seed)
     salary = profile.get("salary") or 50000
     partner_salary = profile.get("partner_salary") or 0
