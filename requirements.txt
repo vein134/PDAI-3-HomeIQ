@@ -8,3 +8,5 @@ numpy>=1.26.0
 requests>=2.31.0
 fpdf2>=2.7.0
 pydantic>=2.5.0
+chromadb>=0.4.0
+python-dotenv>=1.0.0
